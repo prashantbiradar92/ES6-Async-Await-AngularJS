@@ -29,7 +29,7 @@ vm.getUser = async function(userName) {
 ```
 ### Meet $async from angular-async-await 
 
-https://www.npmjs.com/package/angular-async-await
+Refer : node-module  [angular-async-await](https://www.npmjs.com/package/angular-async-await)
 
 Let $async take care of it for you.
 ```
