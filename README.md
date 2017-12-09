@@ -2,8 +2,6 @@
 
 ES7 introduces async functions, which allow you to write asynchronous code with a synchronous syntax. Unfortunately this doesn't work well with AngularJS: awaited code will run outside of Angular's digest loop, and therefore it won't trigger watchers or view updates.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
 ### Problem
 ES7 introduces async functions that allow to write async code with a synchronous syntax.
 This looks like this:
@@ -51,9 +49,9 @@ let SampleViewCtrl = ['DummyService', '$async', function (DummyService, $async) 
  
 export default SampleViewCtrl;
 ```
-### How it works
+### Using generator function
 
-Thanks to the generator functions introduced in ES6 we can write our own async engine that does work well with AngularJS. At Magnet.me we’ve created the $async module which does exactly that. 
+Thanks to the generator functions introduced in ES6 we can write our own async engine that does work well with AngularJS. 
 With $async we can rewrite the initialize function like this:
 ```
 const initialize = $async(function*() {
